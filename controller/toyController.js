@@ -57,7 +57,7 @@ function updateRecord(req,res)
 {
     Toy.findOneAndUpdate({_id:req.body._id,},req.body,{new:true},(err,doc) => {
         if(!err){
-            res.redirect('/list');
+            res.redirect('toy/list');
         }
         else{
             if(err.name == "ValidationError")
@@ -100,7 +100,7 @@ router.get('/:id',(req,res) => {
 router.get('/delete/:id',(req,res) => {
     Toy.findByIdAndRemove(req.params.id,(err,doc) => {
         if(!err){
-            res.redirect('/list');
+            res.redirect('/toy/list');
         }
         else{
             console.log("An error occured during the Delete Process" + err);

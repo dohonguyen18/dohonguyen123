@@ -1,6 +1,6 @@
 <h3>{{viewTitle}}</h3>
 
-    <form action="/" method="POST" autocomplete="off">
+    <form action="/toy" method="POST" autocomplete="off">
         <input type="hidden" name="_id" value="{{toy._id}}">
         <div class="form-group">
             <label> Name Product</label>
@@ -26,7 +26,7 @@
 
         <div class="form-group">
             <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
-            <a href="/list" class="btn btn-danger">
+            <a href="/toy/list" class="btn btn-danger">
                 <i class="fa fa-list-alt"></i>View All
             </a>
         </div>
